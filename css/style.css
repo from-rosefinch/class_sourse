@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0;}
+
+body{
+    perspective: 800px;
+    background-color: #222;
+}
+
+/* icon */
+#menu-icon{
+    position: flex;
+    top: 30px;
+    left: 30px;
+
+}
+
+@keyframes
+nav{
+    width: 150px;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(45deg);
+}
+main{
+    height: 100%;
+    position: relative;
+    transform: rotateY(-10deg);
+    transform-origin: right center;
+}
+main>section{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+main>section>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    /* font-size: 2rem; */
+    font-size: clamp(0.8rem, 3vw, 3rem);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no;
+}
+main>#homme{
+    
+}
+main>#homme, main>#girl{
+    /* 그리드 템플릿 4*4 */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+main>#kids{
+    /* areas로 구성 */
+}
+
+/* #homme */
+section>#homme>p:nth-of-type(1){
+    grid-column: 1 / span 2;
+}
+section>#homme>p:nth-of-type(2){
+    background-image: ;
+}
+section>#homme>p:nth-of-type(6){
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+section>#homme>p:nth-of-type(10){
+
+}
+
+/* girl */
+section#girl>p:nth-of-type(3){
+    grid-column: 3 / 5;
+}
+section#girl>p:nth-of-type(5){
+    grid-row: 2 / 4;
+    gr
+}
