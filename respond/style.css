@@ -1,0 +1,127 @@
+@charset "utf-8";
+:root{
+    --main-color:#3F51B5;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* header */
+h1{
+    color: var(--main-color);
+
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--main-color)
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+nav>.menu-icon{
+    display: ;
+}
+nav>.menu-icon>span{
+    display: block;
+    width: 100%;
+    background-color: #222;
+}
+nav>.menu-icon>span:nth-child(1){
+
+}
+input[id=trigger]{
+    display: none;
+}
+/* checkbox가 체크가 되면 span로테이션 */
+input[id=trigger]:checked+.menu-icon>:nth-child(1){
+    top: calc(50%-1px);
+    transform: rotate(45deg);
+}
+input[id=trigger]:checked+.menu-icon>:nth-child(2)
+input[id=trigger]:checked+.menu-icon>:nth-child(3)
+/* banner */
+.banner>img{
+    width: 100%;
+    height: auto;
+}
+/* gnb */
+input
+.gnb{
+    /* display: none; */
+    
+    top: 0;
+}
+@media screen and (min-width:768px) {
+    nav>.menu-icon{
+        display: none;
+    }
+    .gnb{
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-right: 2rem;
+        position: static;
+        background: none;
+        color: var(--main-color);
+    }
+    .gnb>li{
+        opacity: 1;
+    }
+}
+@media screen and {min-width:1024px} {
+    
+}
+section#we{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#promotion>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#promotion>ul>li{
+    display: flex;
+    flex-direction: column;
+
+}
+#promotion{
+
+}
+#contact{}
+#contact input, #contact textarea{
+    display: block;
+    padding: 0.7rem 0;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+#contact input::placeholder, #contact textarea::placeholder{
+    color:var(--main-color)
+}
+#contact button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    color: #fff;
+    padding: 0.7rem;
+}
+footer{
+    font-size: 1.5rem;
+    text-align: center;
+}
+footer>p{
+    padding: 1rem 0;
+    color: var(--main-color);
+    font-weight: 700;
+}

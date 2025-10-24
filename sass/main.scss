@@ -1,0 +1,15 @@
+@use './variables'as var;
+@use './mixin' as mix;
+
+
+body{
+  background-color:var.$main-color;
+}
+
+.btn_wrap{
+  button{
+    &:nth-child(1){
+      @include mix.btn_color(#00f);
+    }
+  }
+}

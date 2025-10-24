@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        ul{list-style: none;}
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            background-color: #ddd;
+            width: 80%;
+        }
+        ul>li{
+            background-color: aliceblue;
+            padding: 0.5rem 1rem;
+        }
+        body{
+            background-color: #222;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: #ccc;
+            width: 80%;
+            margin: 2rem auto;
+        }
+        /* 모바일을 기준 */
+        @media all and (min-width:321px) and (max-width:768px) {
+            body{background-color: antiquewhite;}
+            div{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media all and (min-width:768px) {
+            h1{display: none;}
+            ul{flex-direction: row;}
+            div{grid-template-columns: repeat(3,1fr);}
+        }
+        @media all and (min-width:1024px) and (max-width:1024){
+            div{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>타이틀</h1>
+    <ul>
+        <li>menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+        <li>menu-4</li>
+    </ul>
+    <div>
+        <p>box1</p>
+        <p>box2</p>
+        <p>box3</p>
+        <p>box4</p>
+        <p>box5</p>
+        <p>box6</p>
+        <p>box7</p>
+        <p>box8</p>
+    </div>
+    <picture>
+        <source srcset="../image/app-ui-02.jpg" media="(max-width:768px)">
+        <source srcset="../image/app-ui-01.jpg" media="(max-width:1024px)">
+        <img src="../image/app-ui-01.jpg" alt="ui01">
+    </picture>
+</body>
+</html>

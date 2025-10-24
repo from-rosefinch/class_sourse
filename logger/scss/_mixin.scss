@@ -1,0 +1,11 @@
+@mixin row-layout($just){
+    display: flex;
+    justify-content: $just;
+    align-items: center;
+    gap: 2rem;
+}
+@mixin pink-btn{
+    background-color: $btn-color;
+    color: #fff;
+    border: 1px solid #fff;
+}

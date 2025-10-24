@@ -53,5 +53,13 @@
         </section>
         <section id="kids"></section>
     </main>
+    <script>
+        const elem=document.querySelectorAll('nav>ul>li>label');
+        elem.forEach((label)=>{
+            document.addEventListener("click",()=>{
+                document.getElementById("menu-check").checked=false;
+            });
+        });
+    </script>
 </body>
 </html>

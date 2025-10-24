@@ -1,0 +1,7 @@
+// mixin 만들고 사용해보기 
+@mixin btn_color($color){
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background-color: $color;
+}
