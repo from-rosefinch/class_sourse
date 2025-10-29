@@ -1,9 +1,9 @@
 @charset "utf-8";
 @use "./font";
-// @forward : 전체 영역에서 사용 가능
 @use "./variable" as *;
 @use "./mixin" as mixin;
 
+// @forward : 전체 영역에서 사용 가능
 html{
   font-size: 14px;
   @include mixin.tablet{ font-size: 16px;}
@@ -23,6 +23,7 @@ header {
   background-image: linear-gradient(to left,#14b8a6 0%, #4380e2 50%, #06b6d4 100%);
   @include mixin.tablet{background: #fff;}
   
+  // 텍스트 로고 데스크탑용
   span{ 
     font-size: 2.5rem;
     font-weight: 700;
@@ -32,7 +33,7 @@ header {
 
     
   }
-  // 모바일 사이즈에서 서치 항목을 새로 작성
+  // 모바일 검색 바
   div.mobile-search {
     @include mixin.flex-layout();
     padding: 1rem;
@@ -82,9 +83,12 @@ header {
       }
       
     }
-    
+    // 모바일 아이콘과 메뉴 카테고리 (사람약, 동물약, 24시 약국)
     ul.icons {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       @include mixin.flex-layout($justify:space-between);
       @include mixin.tablet{width: auto;}
       li {
@@ -129,7 +133,7 @@ header {
         }   
       }
     }
-        //   태블릿 사이즈에서 확인 가능
+        //   약국등록, 메뉴바
       ul.help{
         display: none;
         @include mixin.tablet{
@@ -148,24 +152,24 @@ header {
         li:not(:first-child){
           
           i{
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: $sub-color;
-            // &:hover{
-            //   width: 2rem;  
-            //   color: #fff;  
-            //     background-color: $main-color;
-            //     padding: 1rem;
-            //     border-radius: 50%;
-            //     opacity: 0.9;
-            //     filter: brightness(0.9);
-            // }
+            &:hover{
+              // width: 2rem;  
+              // color: #fff;  
+              //   background-color: $main-color;
+              //   padding: 1rem;
+              //   border-radius: 50%;
+              //   opacity: 0.9;
+                filter: brightness(0.7);
+            }
             }
             
         }
         
       }
   }
-
+// 테블릿, 데스크탑 검색 바
   div.big-search {
     display: none;   
     width: 90%;
@@ -185,17 +189,26 @@ header {
         padding: 1rem  0.5rem 1rem 2rem;
         transition: 0.3;
         img {
-        width: 2rem;
-        display: none;
-        @include mixin.desktop{ display: block;}
+          width: 2rem;
+          display: none;
+          @include mixin.desktop{ display: block;}
         }
-        .info{ @include mixin.desktop { display: none;}}
+        .info{ 
+          gap: 2rem;
+          @include mixin.desktop { display: none;}
+        }
         h3{
           font-size: 1rem;
           color: #333;
         }
         p{
           font-size: 0.8rem;
+        }
+        // 검색바 돋보기 아이콘
+        i{
+          font-size: 1.8rem;
+          color: $main-color;
+          margin-right: 1rem;
         }
         &:nth-child(1){ flex: 1.5; }
         &:nth-child(4){
@@ -234,8 +247,10 @@ main>section{
   .title{
     font-size: 1.5rem;
     font-weight: bolder;
-    @include mixin.flex-layout($justify:space);
-    .sub{
+    @include mixin.flex-layout($justify:space-between);
+    .sub-icons{
+      display: none;
+        @include mixin.tablet { display: block;}
       p{ 
         display: inline-block;
         padding: 0.5rem;
@@ -248,27 +263,23 @@ main>section{
         // aspect-ratio: 1/1;
       }
     }
-    .sub-icons{
-      display: none;
-      @include mixin.tablet{ display: block;}
-      p{ display: inline-block;}
-    }
   }
   ul{
-    width: 140%;
+    margin: 1rem 0;
+    width: 270%;
     @include mixin.tablet{
       width: 150%;
     }
     @include mixin.desktop{
       width: 100%;
     }
-    @include mixin.flex-layout($justify:flex-start);
+    @include mixin.flex-layout();
     .card{
       flex: 1;
       .image{
         box-sizing: border-box;
-        font-size: 1.3rem;
         padding: 2rem;
+        gap: 1rem;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -276,28 +287,46 @@ main>section{
         border-radius: $card-radius;
         @include mixin.flex-layout(row, space-between, flex-start);
         p{
-          background-color:rgba(255,255,255,0.7);
+          width: 5rem;
+          height: auto;
+          background-image: linear-gradient(to right,#14b8a6 0%, #4380e2 50%, #06b6d4 100%);
+          // background-color: #06b6d4;
+          color: $bg-color;
           padding: $base-padding;
           border-radius: $card-radius;
+          font-size: 1rem;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           cursor: pointer;
         }
-        img{
-          width: 3rem;
-          border: 1px solid #fff;
-          cursor: pointer;
-          transition: 0.3s;
+        i{ 
+          font-size: 1.5rem;
+          color: $main-color;
           &:hover{
-            transition: scale(1.1);
+            cursor: pointer;
+            color: $sub-color;
           }
         }
+        
       }
-      // .info{}
+      .info{
+        padding: 1rem;
+        flex: 1;
+        h4{ margin: 0 0 0.5rem 0;}
+        p{
+          margin: 0 0 0.3rem 0;
+        }
+      }
     }
   }
 }
 // 이미지가 아니라 카드가 1,2,3임
 main>section ul.card{
-  &:nth-child(1).image{
-    background-image: url(./);
+  &:nth-child(1).img{
+    background-image: url(../images/타이레놀.png);
+    background-size: cover;
+    justify-content: first baseline;
   }
 }
