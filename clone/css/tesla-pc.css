@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* class */
+.blue{
+    background-color: #3e6ae1;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center;
+}
+.white{
+    background-color: white;
+    color: #222;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    width: 200px;
+    text-align: center;
+}
+/* header 영역 시작 */
+header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1rem 0;
+}
+header>p{
+    font-size: 24px;
+    font-weight: bolder;
+    letter-spacing: 8px;
+}
+header > nav{
+    display: flex;
+    align-items: center;
+}
+header > nav >a{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+header>nav>a:hover{
+    background-color: #ddd;
+}
+header>ul{
+    display: flex;
+    gap: 1rem;
+}
+/* header 영역 끝 */
+
+/* main 영역 시작 */
+main{
+    height: 70vh;
+    background-image: url(../image/main-pc.png);
+    background-size: cover;
+    background-position: center 60%;
+    text-align: center;
+    color: white;
+}
+main>h1{
+    font-size: 4rem;
+}
+main>h1,main>h2{
+    text-shadow: 0 0 10px rgba(0,0,0,3);
+    margin: auto;
+}
+main>a{
+    text-decoration: underline;
+    margin: 10px;
+}
+main>.btn-wrap{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main>.btn-wrap>p:hover{
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+/* main 영역 끝 */
+
+/* section #model 영역 시작 */
+#model{
+    overflow-x: hidden;
+    padding: 2rem;
+}
+#model>.model-item{
+    width: 150vw;
+    display: flex;
+    gap: 2rem;
+}
+#model article{
+    color: white;
+    width: 800px;
+    height: 400px;
+    background-image: url(../image/미드사이즈suv.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: 2px solid #fff; */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+}
+#model article:nth-child(1){
+    background-image: url(../image/미드사이즈suv.png);
+}
+#model article:nth-child(2){
+    background-image: url(../image/CYBERTRUCK.png);
+}
+#model article>.bottom-text>h2{
+    font-size: 3rem;
+}
+#model article>.bottom-text>.btn-wrap{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+#model>.indicator{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 0.5rem;
+}
+#model>.indicator>li{
+    width: 12px;
+    height: 12px;
+    background-color: #9b9b9b63;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* #model>.indicator>li:nth-child(1) */
+#model>.indicator>li:first-child{
+    background-color: #222;
+}
+/* section #model 영역 끝 */
+
+/* section #act 영역 시작 */
+#act{
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+#act>article{
+    display: flex;
+    width: 50%;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+#act>article>div{
+    flex: 2;
+    border-right: 2px solid #000;
+    padding: 2rem;
+}
+#act>article>img{
+    flex: 1;
+    width: 30%;
+    aspect-ratio: 3/1;
+    object-fit: cover;
+}
+/* section #act 영역 끝 */
+
+/* section #network 영역 시작 */
+#network{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+#network>.right{
+    display: flex;
+}
+#network>.right>div>p{
+    font-size: 12px;
+}
+#network>.right>div>.number{
+    display: flex;
+    font-size: 2rem;
+}
+#network>.right>div>.number>div{
+    border: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* section #network 영역 끝 */

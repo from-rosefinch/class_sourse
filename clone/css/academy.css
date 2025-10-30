@@ -1,0 +1,276 @@
+@charset "utf-8";
+:root{
+    --dark-color:#222;
+    --dark-font:#fff;
+    --light-color:#fff;
+    --light-font:#222;
+    --main-color:rgb(125, 185, 125);
+}
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+[data-theme="dark"]{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+/* class 처리 */
+.main-btn{
+    background-color: var(--main-color);
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.sub-title{
+    font-size: 3rem;
+}
+body{
+    max-width: 1024px;
+    margin: 2rem auto;
+    background-color: var(--light-color);
+    font-family: "Paperozi";
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+nav>ul{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+nav>#logo{
+    background-color: #000;
+    color: var(--main-color);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-align: center;
+}
+nav>#logo>p:nth-child(1){
+    line-height: 1.5rem;
+    font-size: 0.7rem;
+}
+nav>#logo>p:nth-child(2){
+    line-height: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.header-bg{
+    height: 60vh;
+    background-image: url(../image/edu-1.png);
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-bg>div{
+    padding-top: 5rem;
+    color: #fff;
+}
+.header-bg>div>h1{
+    padding-top: 5rem;
+    color: #fff;
+    line-height: rem;
+}
+.header-bg>div>p{
+    margin-top: 1rem;
+    display: inline-block;
+}
+.header-bg>ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.header-bg>ul>li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    justify-content: center;
+}
+.header-bg>ul>li:nth-child(1){
+    background-color: var(--main-color);
+}
+/* main */
+main{
+    text-align: center;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+main>p{
+    font-weight: 600;
+    padding: 1rem;
+}
+main>ul{
+    width: 1550px;
+    display: flex;
+    gap: 1rem;
+    padding: 4rem 0;
+}
+main>ul>li{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 300px;
+    height: 350px;
+    background-color: #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+main>ul>li>p{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 0;
+}
+main>ul>li:nth-child(1){
+    background-image: url();
+}
+main>ul>li:nth-child(2){
+    background-image: url();
+}
+main>ul>li:nth-child(3){
+    background-image: ;
+}
+main>ul>li:nth-child(4){
+    background-image: ;
+}
+main>ul>li:nth-child(5){
+    background-image: ;
+}
+#curri{
+    text-align: center;
+    padding: 4rem 4rem;
+}
+#curri>ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+#curri>ul>li{
+    flex: 1;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 0 10px 5px #c2c2c2;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+/* section #contact */
+#contact{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#contact>div:nth-child(1){
+    margin-right: auto;
+}
+#contact>div:nth-child(2){
+    padding: 0 2rem;
+}
+#contact>div:nth-child(2)>p{
+    box-shadow: 0 0 10px  5px #ddd;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+/* section #bg */
+#bg{
+    height: 60vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5)),url();
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: ;
+}
+#bg
+
+footer{
+    height: 30vh;
+    padding: 2rem;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+footer>p{
+    font-size: 1.3rem;
+}
+footer>div{
+    background-color: #000;
+    color: var(--main-color);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 0.5rem;
+    text-align: center;
+    width: 3rem;
+}
